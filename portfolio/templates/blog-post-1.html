@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+          <!-- Mobile Navigation -->
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- End Mobile Navigation -->
+
+          <div class="content-area single-page-area">
+            <div class="single-page-content">
+
+              <article class="post">
+
+                <div class="post-thumbnail">
+                  <img src="/media/{{ post.image }}" alt="image">
+                </div>
+
+                <div class="post-content">
+                  <!-- /Entry header -->
+                  <header class="entry-header">
+                    <!-- Entry meta -->
+                    <div class="entry-meta entry-meta-top">
+                      <span><a href="blog-post-1.html#" rel="category tag">UI</a></span>        
+                    </div>
+                    <!-- /Entry meta -->
+
+                    <h2 class="entry-title">{{ post.title }}</h2>
+                  </header>
+                  <!-- /Entry header -->
+
+                  <!-- Entry content -->
+                  <div class="entry-content">
+                    <div class="row">
+                      <div class=" col-xs-12 col-sm-12 ">
+                        <div class="col-inner">
+                          <p>{{ post.body }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Entry content -->
+    
+                  <div class="entry-meta entry-meta-bottom">
+                    <div class="date-author">
+                      <span class="entry-date">
+                        <a href="{{ blog.get_absolute_url }}" rel="bookmark">
+                          <i class="far fa-clock"></i> <span class="entry-date">{{ post.publish }}</span>
+                        </a>
+                      </span>
+                      <span class="author vcard">
+                        <a class="url fn n" href="blog-post-1.html#" rel="author"> <i class="fas fa-user"></i> LMPixels</a>
+                      </span>
+                    </div>
+      
+                    <!-- Share Buttons -->
+                    <div class="entry-share btn-group share-buttons">
+                      <a href="blog-post-1.html#" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      
+                      <a href="blog-post-1.html#" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+
+                      <a href="blog-post-1.html#" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn" title="Share on LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </div>
+                    <!-- /Share Buttons -->
+                  </div>
+
+                  <div class="post-tags">
+                    <div class="tags">
+                      <a href="blog-post-1.html#" rel="tag">animate</a>
+                      <a href="blog-post-1.html#" rel="tag">bar</a>
+                      <a href="blog-post-1.html#" rel="tag">design</a>
+                      <a href="blog-post-1.html#" rel="tag">progress</a>
+                      <a href="blog-post-1.html#" rel="tag">ui</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+{% endblock %}
